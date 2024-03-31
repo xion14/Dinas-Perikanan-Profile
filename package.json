@@ -2,12 +2,15 @@
   "name": "dinas_perikanan_profile",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://xion14.github.io/Dinas-Perikanan-Profile",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.3",
