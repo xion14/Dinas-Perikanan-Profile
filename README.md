@@ -8,3 +8,5 @@ Landing page for Dinas Perikanan Merauke Project
 "tailwindcss": "^3.4.1",
 # Lottie Animation
  "@lottiefiles/react-lottie-player": "^3.5.3",
+
+ # PR belajar mengonlinekan web ke github.io menggunakan vite react

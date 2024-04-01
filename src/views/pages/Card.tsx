@@ -5,7 +5,7 @@ const Card = ({ data }) => {
   return (
     <>
       {data.map((item, index) => (
-        <div key={index} className='m-10 text-center p-10 shadow-lg rounded-xl my-10'>
+        <div key={index} className='m-10 text-center p-10 shadow-lg flex flex-col  w-screen lg:w-auto rounded-xl'>
           <img src={item.image} style={{ width: 100, height: 100, margin: 'auto' }} alt={item.title}></img>
           <h3>{item.title}</h3>
           <p className='py-2'>{item.description}</p>

@@ -30,6 +30,8 @@ import user from '../img/user.png'
 import ikan1 from '../img/fish1.png'
 import ikan2 from '../img/fish2.png'
 import ikan3 from '../img/fish3.png'
+import Testing from '../img/testing.jpg'
+
 
 /* segment import */
 import icon from '../img/icon.png'
@@ -57,6 +59,7 @@ export default function Perikanan() {
   const [darmode, setdarkmode] = useState(false);
 
   const lorem = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+  const Tentang = 'Dinas Perikanan Kabupaten Merauke adalah lembaga pemerintah yang bertanggung jawab atas pengelolaan sumber daya perikanan di wilayah Kabupaten Merauke, Provinsi Papua, Indonesia. Sebagai salah satu daerah pesisir terluar di Indonesia, Kabupaten Merauke memiliki potensi sumber daya perikanan yang besar, baik di sektor perikanan tangkap maupun budidaya.Dinas Perikanan Kabupaten Merauke memiliki beragam fungsi dan tugas untuk mengelola, mengawasi, dan mengembangkan sektor perikanan di wilayah tersebut.'
 
 
   /* data seksi kantor */
@@ -110,8 +113,7 @@ export default function Perikanan() {
     { imageUrl: website2, url: 'https://www.google.com' },
     { imageUrl: website2, url: 'https://www.google.com' },
     { imageUrl: website2, url: 'https://www.google.com' },
-    { imageUrl: website2, url: 'https://www.google.com' },
-    { imageUrl: website2, url: 'https://www.google.com' },
+    
     // Tambahkan data website lainnya di sini
   ];
 
@@ -178,7 +180,7 @@ export default function Perikanan() {
   }, []);
 
   return (
-    <div className={darmode ? 'dark' : ''}>
+    <div className={darmode ? 'dark' : ''} >
       {LoadingCheck ?
         (
           <div className='bg-gradient-to-f from-blue-300 to-blue-500 w-screen h-screen flex justify-center items-center'>
@@ -195,7 +197,7 @@ export default function Perikanan() {
         :
         (
 
-          <div className='flex overflow-hidden '>
+          <div className='flex flex-col w-screen bg-blue-300 '>
             <div className=''>
 
               <head>
@@ -205,7 +207,7 @@ export default function Perikanan() {
               </head>
 
               {/* main class */}
-              <main className='bg-white dark:bg-gray-800 overflow-hidden'>
+              <main className='bg-white dark:bg-gray-800 overflow-hidden '>
 
 
                 {/*   section header start */}
@@ -214,7 +216,7 @@ export default function Perikanan() {
                 {scrolling ? (
                   /* jika scroll true */
                   <section className='justify-center items-center'>
-                    <div className={`fixed w-full px-20 h-24 z-20 bg-gradient-to-r from-blue-700 to-blue-500 animate-slideInLeft shadow-md`} data-aos="fade-right" />
+                    <div className={`fixed w-full px-20 h-24 z-20 bg-gradient-to-r from-blue-700/50 to-blue-500/50 animate-slideInLeft shadow-md`} data-aos="fade-right" />
                     <div className=' fixed z-50 bg-transparent w-full'>
                       <Header toggleSidebar={toggleSidebar} />
                     </div>
@@ -230,7 +232,9 @@ export default function Perikanan() {
                     <div className=' fixed z-50 bg-transparent w-full '>
                       <Header toggleSidebar={toggleSidebar} />
                       <div className='flex flex-col items-center justify-center'>
-                        <div className=' shadow-sm shadow-white  w-9/12 h-0.5 animate-slideInRight relative' />
+                        <div className=' shadow-sm shadow-blue-300  w-9/12 h-0.5 animate-slideInRight relative' />
+                        <div className=' shadow-sm shadow-blue-300 mt-2 w-9/12 h-0.5 animate-slideInRight relative' />
+                     
                       </div>
                     </div>
                   </section>
@@ -246,10 +250,10 @@ export default function Perikanan() {
                 </section>
                 {/* section header end */}
 
-                <div className="absolute w-screen z-0 shadow-md" >
+                <div className="absolute w-screen z-0 bg-blue-600 shadow-md" >
                   <Player
                     src={BGanimation}
-                    className="player"
+                    className="player h-screen"
                     loop
                     autoplay
                   />
@@ -257,12 +261,12 @@ export default function Perikanan() {
                 </div>
 
 
-
-                {/* section 2 */}
+                <div id='Home' className='absolute' ></div>
+                {/* section 2 start */}
                 <section>
                   <div className='z-10 relative flex flex-row  justify-center items-center space-x-0  h-screen  ' >
 
-                    <div className='items-start flex flex-col  h-screen justify-center' data-aos="fade-right">
+                    <div className='items-start flex flex-col  h-screen justify-center' data-aos="fade-right" data-aos-anchor-placement='data-aos-anchor-placement'>
                       <div className='p-10  items-start w-auto'>
                         <h2 className='text-center font-pacifico md:text-xl lg:text-6xl' style={{ lineHeight: '1.5' }}>
                           <span className="text-white mx-10 lg:text-8xl" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>Dinas</span>
@@ -285,73 +289,118 @@ export default function Perikanan() {
 
 
                 </section>
-                {/* section 2 */}
+                {/* section 2 end*/}
 
+                {/* section 3 start*/}
+                <div id='Tentang' className='absolute' ></div>
+                <section data-aos="fade-right" className=' w-screen'>
+                  <div className='flex flex-col-reverse lg:flex-row  mt-40 justify-between space-x-0 mx-40 items-center h-screen w-auto '>
+                    {/* Isi konten di sini */}
 
-                {/* section 3 */}
-                <section>
-                  <div className='flex flex-row my-20   justify-between space-x-0 mx-40  items-center  h-screen '>
-
-                    <div className='relative flex flex-col justify-center items-start  h-screen w-full' data-aos="fade-right" data-aos-offset="50">
-                      <div className='absolute h-auto'>
-                        <img
-                          src={blop2}
-                          alt='Xion White Code Developers '
-                          className='full-image pb-10 '
-                          style={{ objectFit: 'cover', width: '85%', height: '100%' }}
-                        />
-                      </div>
-                      <div className='relative mt-20 flex flex-col items-start'>
-                        <img
-                          src={sejarah}
-                          alt='Xion White Code Developers'
-                          className='full-image relative z-10 ml-7'
-                          style={{ objectFit: 'fill', width: '95%', height: '100%', left: '0' }}
-                        />
-                      </div>
-                    </div>
-
-
-
-
-                    <div className='items-start flex flex-col bg'>
-                      <div className='text-xl   items-start w-50% bg  w-[35vw] pr-10   h-[500px]' data-aos="fade-right">
-                        <h2 className='absolute  lg:w-[35vw] mb-10 z-0 text-5xl py-2  my-2 text-gray-100 font-medium text-end font-pacifico lg:text-8xl md:text-1xl' style={{ lineHeight: '1.5' }}>
-                          Pelayanan
+                    <div className='items-center justify-center flex flex-col bg'>
+                      <div className='text-xl  items-start  bg  w-[80vw] lg:w-[50vw] pr-10   h-auto' >
+                        <h2 className='absolute    lg:w-[32vw] mb-10 z-0 text-5xl py-2  my-2 text-gray-100 font-medium text-end font-pacifico lg:text-8xl md:text-1xl' style={{ lineHeight: '1.5' }}>
+                          Tentang
                         </h2>
-                        <div className=' w-screen h-10 bg'>
 
-                        </div>
                         <h2 className='mt-5 relative z-10 text-5xl py-2  my-2 text-gray-500 font-medium text-left font-pacifico md:text-8xl' style={{ lineHeight: '1.5' }}>
-                          Pelayanan
+                          Tentang
                         </h2>
                         <div className=' '>
-                          <p className=' text-justify h-auto'>
-                            {lorem}
+                          <p className=' text-justify h-auto text-xl'>
+                            {Tentang}
                           </p>
                         </div>
                       </div>
 
 
                     </div>
+
+
+                    <div className='relative flex flex-col justify-center items-center  h-full w-screen' >
+                      <div className='flex justify-center items-center'>
+                        <img
+                          src={Testing}
+                          alt='Xion White Code Developers'
+                          className=' relative z-10'
+                          style={{ objectFit: 'fill', width: '90%', height: '90%', borderRadius:10 }}
+                        />
+                      </div>
+                    </div>
+
+
+
+
+
 
                   </div>
 
 
                 </section>
+                {/* section 3 end*/}
 
-                {/* section 3 */}
+                  {/* section 4 start*/}
+                  <div id='Pelayanan' className='absolute' ></div>
+                <section className='h-fit my-10'>
+                  <div className='flex flex-col lg:flex-row  justify-between space-x-0 lg:mx-40  items-center  h-screen w-screen lg:w-auto '>
+                    
+                  <div className=' relative  flex flex-col justify-center items-end  h-full' data-aos="fade-left">
+                      <div className='absolute  h-auto  '>
+                        <img
+                          src={blop2}
+                          alt='Xion White Code Developers '
+                          className='full-image pb-20  ml-20'
+                          style={{ objectFit: 'cover', width: '80%', height: '100%' }}
+                        />
+                      </div>
+                      <div className='relative mt-20   flex flex-col items-start '>
+                        <img
+                          src={sejarah}
+                          alt='Xion White Code Developers'
+                          className='full-image relative z-10'
+                          style={{ objectFit: 'cover', width: '95%', height: '100%', left: '-0' }}
+                        />
+                      </div>
+                    </div>
 
-                {/* section 4 */}
-                <section>
-                  <div className='flex flex-row my-20  justify-between space-x-0 mx-40  items-center  h-screen  '>
 
-
-
-
-                    <div className=' items-start flex flex-col bg ' data-aos="fade-left">
-                      <div className='text-xl   items-start w-50% bg  w-[35vw] pr-10  h-[500px]'>
+                    <div className=' items-center justify-center flex flex-col bg-red-400-200 h-full' data-aos="fade-left">
+                      <div className='text-xl items-center bg px-10 w-screen lg:w-[45vw] pr-10  h-auto'>
                         <h2 className='absolute  lg:w-[30vw] mb-10 z-0 text-5xl py-2  my-2 text-gray-100 font-medium text-end font-pacifico lg:text-8xl md:text-1xl' style={{ lineHeight: '1.5' }}>
+                          Pelayanan
+                        </h2>
+                        <div className=' w-screen h-10 bg'>
+
+                        </div>
+                        <h2 className='mt-5 relative z-10 text-5xl py-2  my-2 text-gray-500 font-medium text-left font-pacifico md:text-8xl' style={{ lineHeight: '1.5' }}>
+                        Pelayanan
+                        </h2>
+                        <div className='p-2 h-full '>
+                          <p className=' text-justify h-auto'>
+                            {Tentang}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+
+                  </div>
+
+
+                </section>
+                {/* section 4 end*/}
+
+
+
+                {/* section 4 start*/}
+                <div id='Sejarah' className='absolute' ></div>
+                <section className=' h-fit my-10'>
+                  <div className='flex flex-col-reverse lg:flex-row  justify-between space-x-0 lg:mx-40  items-center  h-screen w-screen lg:w-auto '>
+                    
+                    <div className=' items-center justify-center flex flex-col bg-red-400-200 h-full' data-aos="fade-left">
+                      <div className='text-xl items-center bg px-10 w-screen lg:w-[45vw] pr-10  h-auto'>
+                        <h2 className='absolute ml-40 lg:ml-5 lg:w-[30vw] my-10 z-0 text-5xl py-2  lg:my-2 text-gray-100 font-medium text-end font-pacifico lg:text-8xl md:text-1xl' style={{ lineHeight: '1.5' }}>
                           Sejarah
                         </h2>
                         <div className=' w-screen h-10 bg'>
@@ -360,16 +409,16 @@ export default function Perikanan() {
                         <h2 className='mt-5 relative z-10 text-5xl py-2  my-2 text-gray-500 font-medium text-left font-pacifico md:text-8xl' style={{ lineHeight: '1.5' }}>
                           Sejarah
                         </h2>
-                        <div className=' '>
+                        <div className='p-2 h-full '>
                           <p className=' text-justify h-auto'>
-                            {lorem}
+                            {Tentang}
                           </p>
                         </div>
                       </div>
                     </div>
 
-                    <div className=' relative  flex flex-col justify-center items-end h h-full' data-aos="fade-left">
-                      <div className='absolute  h-auto   '>
+                    <div className=' relative  flex flex-col justify-center items-end  h-full' data-aos="fade-left">
+                      <div className='absolute  h-auto  '>
                         <img
                           src={blop3}
                           alt='Xion White Code Developers '
@@ -377,7 +426,7 @@ export default function Perikanan() {
                           style={{ objectFit: 'cover', width: '80%', height: '100%' }}
                         />
                       </div>
-                      <div className='relative mt-20  flex flex-col items-start '>
+                      <div className='relative mt-20   flex flex-col items-start '>
                         <img
                           src={sejarah2}
                           alt='Xion White Code Developers'
@@ -391,12 +440,12 @@ export default function Perikanan() {
 
 
                 </section>
-                {/* section 4 */}
+                {/* section 4 end*/}
 
 
-                {/* section 5 */}
+                {/* section 5 start */}
                 <section className=' relative'>
-                  <div className='  z-10 flex flex-row  justify-center space-x-0  items-center  h-auto ' data-aos="fade-up">
+                  <div className='  z-10 flex flex-row  justify-center space-x-0  items-center w-screen h-auto ' data-aos="fade-up">
 
                     <div className='items-center flex flex-col bg  mx-40 h-auto '>
                       <div className='absolute text-xl p-10  items-center w-auto  h-auto z-10'>
@@ -419,10 +468,8 @@ export default function Perikanan() {
                       </div>
 
                       <section>
-
-
                         {/* card part */}
-                        <div className="z-10 App flex ">
+                        <div className="z-10 App flex flex-col lg:flex-row m-20 lg:m-10">
                           {chunks.map((chunk, index) => (
                             <div className='' key={index}>
                               <Card data={chunk} />
@@ -447,9 +494,9 @@ export default function Perikanan() {
                     />
                   </div>
                 </section>
-                {/* section 5 */}
+                {/* section 5 end*/}
 
-                {/* section 5 */}
+                {/* section 6 start */}
                 <section data-aos="fade-up">
                   <div className='relative flex flex-row bg justify-center space-x-0  items-center  h-auto'>
                     <div className='items-center flex flex-col bg h-auto '>
@@ -469,10 +516,10 @@ export default function Perikanan() {
 
                         {/* card part */}
 
-                        <div className="basis-1/3 website-list flex flex-col justify-center z-10  mx-[10%]   rounded-lg ">
-                          <div className="basis-1/3 website-list flex flex-col justify-center relative  z-10  rounded-lg">
+                        <div className="  website-list flex flex-col justify-center z-10  mx-[10%]   rounded-lg ">
+                          <div className="  website-list flex flex-col justify-center relative  z-10  rounded-lg">
                             {chunks2.map((chunk, index) => (
-                              <div key={index} className="flex flex-row mx-40 m-10  space-x-10 ">
+                              <div key={index} className="flex flex-col  lg:flex-row  m-2    ">
                                 {chunk.map((website, idx) => (
                                   <Webcard key={idx} imageUrl={website.imageUrl} url={website.url} />
                                 ))}
@@ -497,7 +544,7 @@ export default function Perikanan() {
                   </div>
 
                 </section>
-                {/* section 5 */}
+                {/* section 6 end*/}
 
                 {/* Footer start */}
                 <section className='h-full pb-5 w-screen px-10 mt-96 bg-blue-700'  >

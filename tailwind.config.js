@@ -15,8 +15,8 @@ export default {
         fadeIn: 'fadeIn 3s ease-out',
         slideInTop: 'slideInTop 0.5s ease-out',
         slideInBot: 'slideInBot 0.8s ease-out',
-        slideInLeft: 'slideInLeft 0.4s ease-out',
-        slideInRight: 'slideInRight 0.4s ease-out',
+        slideInLeft: 'slideInLeft 0.3s ease-out',
+        slideInRight: 'slideInRight 0.3s ease-out',
         slideInRightClose: 'slideInRightClose 0.4s ease-out',
       },
       keyframes: {
